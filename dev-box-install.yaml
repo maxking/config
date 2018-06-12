@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Install Development Requirements
+      apt: name={{item}}
+      with_items:
+        - htop
+        - git
+        - python-dev
+        - python3-dev
+        - python-pip
+        - clang
+        - gcc
+        - tmux
+        - terminator

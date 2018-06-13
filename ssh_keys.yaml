@@ -1,0 +1,8 @@
+# Ansible playbook to setup authorized ssh keys.
+- hosts: localhost
+  tasks:
+    - name: Setup authorized keys for maxking
+      authorized_key:
+        user: maxking
+        state: present
+        key: https://github.com/maxking.keys
